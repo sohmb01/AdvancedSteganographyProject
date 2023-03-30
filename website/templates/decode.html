@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+    <form method="POST" enctype="multipart/form-data" >
+        <h1 align="center">Steganography Demo</h1>
+        <div class="form-group">
+        <label for="originalFile">Enter the file name to be decoded :</label>
+        <input
+            type="start"
+            class="form-control"
+            id="originalFile"
+            name="originalFile"
+            placeholder=""
+        />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div>
+        <ul>
+            {% for imageName in encoded_images %}
+      
+            <li>
+                {{imageName}}
+      
+                <br>
+                <img src="/static/uploads/updatedFiles/{{imageName}}" alt="{{imageName}}" width=40% height=auto>
+            </li>
+            {% endfor %}
+      
+        </ul>
+      </div>
+    
+    {% endblock %}
+    

@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<h1 align="center">Steganography Demo</h1>
+<div>
+  <ul>
+      {% for imageName in encoded_images %}
+
+      <li>
+          {{imageName}}
+
+          <br>
+          <img src="/static/uploads/updatedFiles/{{imageName}}" alt="{{imageName}}" width=40% height=auto>
+      </li>
+      {% endfor %}
+
+  </ul>
+</div>
+{% endblock %}
